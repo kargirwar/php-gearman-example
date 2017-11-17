@@ -14,7 +14,7 @@ class Worker {
     }
 
     public function run() {
-        while($this->mWorker->work()) {
+        while ($this->mWorker->work()) {
             if ($this->mWorker->returnCode() != GEARMAN_SUCCESS) {
                 throw new \Exception("Fatal Error");
             }
