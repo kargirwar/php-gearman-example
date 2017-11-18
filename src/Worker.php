@@ -21,7 +21,7 @@ class Worker {
         }
     }
 
-    public function report($job) {
+    public function report(\GearmanJob $job) {
         //simulate long running task
         sleep(1);
         echo "\nYay!Sent the report to " . $job->workload() . "\n";
