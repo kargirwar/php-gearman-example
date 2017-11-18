@@ -12,7 +12,7 @@ class Client {
         $this->mClient->addServer();
     }
 
-    public function run($user) {
+    public function run(string $user) {
         $this->mClient->doBackground(self::JOB_TYPE_REPORT, $user);
 
         if ($this->mClient->returnCode() != GEARMAN_SUCCESS) {
